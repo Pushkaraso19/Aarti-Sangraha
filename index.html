@@ -425,27 +425,23 @@
         </div>
         
         <script>
-        // Auto-active nav link on scroll
         document.addEventListener('DOMContentLoaded', function() {
             const navLinks = document.querySelectorAll('.aarti-nav a');
             const sectionIds = Array.from(navLinks).map(link => link.getAttribute('href').replace('#', ''));
             const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
-            // Find all dividers after each section
             const dividers = Array.from(document.querySelectorAll('.aarti-divider'));
-            // The first section starts at the top
             let dividerTops = [sections[0] ? sections[0].offsetTop : 0];
             dividers.forEach(div => dividerTops.push(div.offsetTop));
 
             function onScroll() {
                 let scrollPos = window.scrollY || window.pageYOffset;
-                let offset = 70; // nav height + margin
+                let offset = 70;
                 let activeIndex = 0;
                 for (let i = 0; i < dividerTops.length; i++) {
                     if (dividerTops[i] - offset <= scrollPos) {
                         activeIndex = i;
                     }
                 }
-                // If near the bottom, always highlight the last nav link
                 if ((window.innerHeight + scrollPos) >= (document.body.scrollHeight - 2)) {
                     activeIndex = navLinks.length - 1;
                 }

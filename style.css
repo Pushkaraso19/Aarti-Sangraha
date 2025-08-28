@@ -14,7 +14,7 @@
 [id^="ashtavinayak"] {
     scroll-margin-top: 60px;
 }
-/* Horizontal scrollable nav for aarti jump */
+
 .aarti-nav {
     display: flex;
     overflow-x: auto;
@@ -65,7 +65,7 @@
         padding: 7px 10px;
     }
 }
-/* Glassmorphism and improved styling for Aarti Sangraha */
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: rgb(0, 0, 0, 0.9);
