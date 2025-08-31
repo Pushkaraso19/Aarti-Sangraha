@@ -9,9 +9,11 @@
 [id^="ekveerechi_aarti"],
 [id^="ramachi_aarti"],
 [id^="narmada_aarti"],
+[id^="shiv_narmada_aarti"],
 [id^="ghalin_lotangan"],
 [id^="mantrapushpanjali"],
-[id^="ashtavinayak"] {
+[id^="ashtavinayak"],
+[id^="shlok"] {
     scroll-margin-top: 60px;
 }
 
